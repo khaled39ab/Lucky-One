@@ -1,10 +1,14 @@
 import './App.css';
+import Travel from './components/Travel/Travel';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Where Should to Visit</h1>
-      <h3>Choose 4 Place</h3>
+    <div className='App'>
+      <div className='title-area'>
+        <h1 className='title'>Confused Traveler</h1>
+        <h2>Choose 4 Places</h2>
+      </div>
+      <Travel></Travel>
     </div>
   );
 }
