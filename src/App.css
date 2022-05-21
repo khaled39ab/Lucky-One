@@ -1,5 +1,6 @@
 .App {
   background-color: rgb(215, 218, 220);
+  margin-top: 0;
 }
 
 .App-logo {
@@ -33,6 +34,11 @@
 }
 .title{
   color: blueviolet;
+}
+
+.subtitle{
+  color: #f86d58;
+  font-size: 25px;
 }
 
 @keyframes App-logo-spin {

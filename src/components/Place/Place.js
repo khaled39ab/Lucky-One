@@ -1,14 +1,18 @@
 import React from 'react';
+import './Place.css'
 
 const Place = (props) => {
-    console.log(props);
-    const {img, name} = props.place;
+    const { img, name, budget } = props.place;
     return (
-        <div>
-            <div>
-                <img src={img} alt="" />
-                <h3>{name}</h3>
+        <div className='place'>
+            <img src={img} alt="" />
+            <div className='place-info'>
+                <h3 className='place-name'>{name}</h3>
+                <h4 className='budget'>Budget: {budget}tk</h4>
             </div>
+            <button className='btn-cart'>
+                <p>ADD TO CART</p>
+            </button>
         </div>
     );
 };

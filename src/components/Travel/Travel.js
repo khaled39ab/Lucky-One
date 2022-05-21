@@ -14,7 +14,6 @@ const Travel = () => {
     return (
         <div className='travel-container'>
             <div className='places-container'>
-                <h3>Select, You want to travel...</h3>
                 {
                     places.map(place => <Place
                         key={place.id}

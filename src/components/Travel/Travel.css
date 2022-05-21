@@ -1,5 +1,12 @@
 .travel-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
-    margin: 15px;
+    margin: 30px 15px;
+}
+
+.places-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
 }
