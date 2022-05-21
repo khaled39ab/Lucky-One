@@ -1,6 +1,5 @@
 .App {
   background-color: rgb(215, 218, 220);
-  margin-top: 0;
 }
 
 .App-logo {
@@ -34,6 +33,7 @@
 }
 .title{
   color: blueviolet;
+  margin-top: 0;
 }
 
 .subtitle{

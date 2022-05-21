@@ -1,12 +1,37 @@
 .travel-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
-    margin: 30px 15px;
+    margin: 10px 15px;
 }
 
 .places-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    margin-top: 20px;
+}
+
+.cart-container{
+    background-color: rgb(191, 198, 205);
+    border-radius: 8px;
+}
+
+/* Small device */
+@media screen and (min-width: 0px) and (max-width: 767px){
+    .places-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Medium devices */
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .places-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* large devices */
+@media screen and (min-width: 992px) {
+    .places-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Place from '../Place/Place';
 import './Travel.css';
 
 const Travel = () => {
     const [places, setPlaces] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch('places.json')
@@ -11,6 +13,12 @@ const Travel = () => {
             .then(data => setPlaces(data))
     }, [])
 
+    const handleAddToCart = (selectedPlace) =>{
+        // console.log(selectedPlace);
+        const newCart = [...cart, selectedPlace]
+        setCart (newCart);
+    }
+    // const placeName = handleAddToCart();
     return (
         <div className='travel-container'>
             <div className='places-container'>
@@ -18,11 +26,14 @@ const Travel = () => {
                     places.map(place => <Place
                         key={place.id}
                         place={place}
+                        handleAddToCart={handleAddToCart}
                     ></Place>)
                 }
             </div>
             <div className='cart-container'>
-                <h3>Selected Places</h3>
+                <Cart 
+                    cart= {cart}
+                ></Cart>
             </div>
         </div>
     );

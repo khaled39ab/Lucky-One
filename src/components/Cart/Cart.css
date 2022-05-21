@@ -1,0 +1,43 @@
+.cart{
+    position: sticky;
+    top: 0;
+}
+
+.cart h2{
+    color: rgb(239, 86, 234);
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.selected-items{
+    margin: 20px;
+}
+
+.selectedPlace{
+    display: flex;
+    align-items: center;
+}
+
+.selectedPlace img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.btn-container{
+    margin-left: 20px;
+}
+
+.forMe-btn{
+    color: green;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.again-btn{
+    color: peru;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
