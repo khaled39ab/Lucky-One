@@ -2,22 +2,30 @@ import './Cart.css'
 
 const Cart = ({ cart }) => {
 
-    let newCart = [];
-    for (const item of cart) {
-        if (newCart.filter(x => x.id === item.id).length === 0) {
-            if (newCart.length < 4) {
-                newCart.push(item);
+    const cartFunc = () =>{
+        let newCart = [];
+        for (const item of cart) {
+            if (newCart.filter(x => x.id === item.id).length === 0) {
+                if (newCart.length < 4) {
+                    newCart.push(item);
+                }
             }
         }
+        return newCart;
     }
-    
-    const chooseAgain = () =>document.className("selected-place").remove()
+    let newFunc = cartFunc();
+
+    const chooseAgain = () =>{
+        newFunc = []
+        console.log(newFunc);
+    }
+    console.log(newFunc);
     return (
         <div className='cart'>
             <h2>Selected Places</h2>
             <div className='selected-items'>
                 {
-                    newCart.map(place =>
+                    newFunc.map(place =>
                         <div className='selected-place' key={place.id}>
                             <img src={place.img} alt="" />
                             <h4>{place.name}</h4>
