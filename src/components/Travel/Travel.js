@@ -31,6 +31,7 @@ const Travel = () => {
             <div className='cart-container'>
                 <Cart 
                     cart= {cart}
+                    setCart= {setCart}
                 ></Cart>
             </div>
         </div>

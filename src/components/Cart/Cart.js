@@ -1,31 +1,32 @@
 import './Cart.css'
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, setCart }) => {
 
-    const cartFunc = () =>{
-        let newCart = [];
-        for (const item of cart) {
-            if (newCart.filter(x => x.id === item.id).length === 0) {
-                if (newCart.length < 4) {
-                    newCart.push(item);
-                }
+    let places = [];
+    for (const item of cart) {
+        if (places.filter(x => x.id === item.id).length === 0) {
+            if (places.length < 4) {
+                places.push(item);
             }
         }
-        return newCart;
     }
-    let newFunc = cartFunc();
 
-    const chooseAgain = () =>{
-        newFunc = []
-        console.log(newFunc);
+    const randomPlace = () => {
+        const placeNum = Math.floor(Math.random() * places.length);
+        const item = cart[placeNum]
+        setCart([item])
     }
-    console.log(newFunc);
+
+    const chooseAgain = () => {
+        setCart([])
+    }
+
     return (
         <div className='cart'>
             <h2>Selected Places</h2>
             <div className='selected-items'>
                 {
-                    newFunc.map(place =>
+                    places.map(place =>
                         <div className='selected-place' key={place.id}>
                             <img src={place.img} alt="" />
                             <h4>{place.name}</h4>
@@ -34,7 +35,7 @@ const Cart = ({ cart }) => {
                 }
             </div>
             <div className='btn-container'>
-                <button className='forMe-btn'>CHOOSE 1 FOR ME</button> <br />
+                <button onClick={randomPlace} className='forMe-btn'>CHOOSE 1 FOR ME</button> <br />
                 <button onClick={chooseAgain} className='again-btn'>CHOOSE AGAIN</button>
             </div>
         </div>
