@@ -3,18 +3,18 @@ import './Cart.css'
 const Cart = ({ cart, setCart }) => {
 
     let places = [];
-    for (const item of cart) {
-        if (places.filter(x => x.id === item.id).length === 0) {
+    for (const place of cart) {
+        if (places.filter(selectPlace => selectPlace.id === place.id).length === 0) {
             if (places.length < 4) {
-                places.push(item);
+                places.push(place);
             }
         }
     }
 
     const randomPlace = () => {
         const placeNum = Math.floor(Math.random() * places.length);
-        const item = cart[placeNum]
-        setCart([item])
+        const area = cart[placeNum]
+        setCart([area])
     }
 
     const chooseAgain = () => {
