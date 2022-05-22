@@ -1,4 +1,5 @@
 import './App.css';
+import QuestionAnswer from './components/QuestionAnswer/QuestionAnswer';
 import Travel from './components/Travel/Travel';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <p className='subtitle'>Choose 4 Places</p>
       </div>
       <Travel></Travel>
+      <QuestionAnswer></QuestionAnswer>
     </div>
   );
 }

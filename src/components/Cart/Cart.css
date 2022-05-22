@@ -13,12 +13,12 @@
     margin: 20px;
 }
 
-.selectedPlace{
+.selected-place{
     display: flex;
     align-items: center;
 }
 
-.selectedPlace img{
+.selected-place img{
     height: 30px;
     width: 30px;
     border-radius: 50%;

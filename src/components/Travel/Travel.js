@@ -14,11 +14,9 @@ const Travel = () => {
     }, [])
 
     const handleAddToCart = (selectedPlace) =>{
-        // console.log(selectedPlace);
         const newCart = [...cart, selectedPlace]
         setCart (newCart);
     }
-    // const placeName = handleAddToCart();
     return (
         <div className='travel-container'>
             <div className='places-container'>
